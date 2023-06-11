@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;800&display=swap');
+
+
+body {
+	font-family: 'Inter', sans-serif;
+	margin: 30px;
+}
+
+.grid-container {
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: #eeeeee;
+
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 100px 200px 300px;
+	grid-gap: 10px;
+	justify-items: stretch;
+	align-items: center;
+}
+
+.grid-container > div {
+	background-color: #cccccc;
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #777777;
+}
+
+.grid-container > div:nth-child(1) {
+	grid-column: 1 / span 2;
+}
+
+.grid-container > div:nth-child(2) {
+	grid-column: span 3;
+}
+
+.grid-container > div:nth-child(3) {
+	grid-column: span 1;
+}
+
+.grid-container > div:nth-child(4) {
+	grid-column: 2 / 6;
+	align-self: end;
+	justify-self: center;
+}
+
+.grid-container > div:nth-child(5) {
+	grid-column: span 3;
+}
+
+.grid-container > div:nth-child(6) {
+	grid-column: span 3;
+}
